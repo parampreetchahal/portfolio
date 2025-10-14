@@ -1,0 +1,194 @@
+.portfolio-wrapper {
+  outline: none; /* remove focus outline for keyboard scrolling */
+}
+
+.portfolio-container {
+    display: block;
+  padding: 20px;
+  margin: 20px 20px; /* 20px left and right margin */
+  color: white;
+  /* background-color: rgba(0, 10, 5, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  width: calc(100% - 40px);  */
+}
+
+
+
+
+.projects-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+  padding-bottom: 10px;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  display: none; /* hide scrollbar in Chrome/Safari */
+}
+
+.project-card {
+  flex: 0 0 250px; /* fixed width card */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 10, 5, 0.35);
+  border-radius: 10px;
+  /*box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  border: 2px solid rgba(255,255,255,0.1);*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #6b73ff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #000dff;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(67, 180, 176, 0.548);
+
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: left;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: rgba(20, 25, 25, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  animation: popupFade 0.3s ease;
+  color: #fff;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.modal-content button {
+  background-color: #6b73ff;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #4a52d1;
+}
+
+@keyframes popupFade {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+@media (max-width: 480px) {
+  .portfolio-container {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    padding: 15px;
+  }
+}
+
+.skills-honeycomb {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
+    grid-auto-rows: 130px; /* vertical distance between rows = hex-height * 3/4 */
+    justify-content: center;
+    gap: 0; /* no extra gap */
+}
+
+.hex {
+    width: 120px;
+    height: 120px; /* hex height */
+    background-color: #f0f0f0;
+    clip-path: polygon(
+        50% 0%, 
+        93% 25%, 
+        93% 75%, 
+        50% 100%, 
+        7% 75%, 
+        7% 25%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+/* Stagger every second column using transform for honeycomb effect */
+.skills-honeycomb .hex:nth-child(odd) {
+    transform: translateY(52px); /* half vertical distance between rows */
+    
+}
+
+
+
+.hex img {
+    width: 70%; 
+    height: 70%;
+    object-fit: contain;
+}
+
+.hex:hover {
+    transform: scale(1.1);
+}
