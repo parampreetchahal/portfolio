@@ -152,7 +152,7 @@ h1{
 .skills-honeycomb {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
-    grid-auto-rows: 130px; /* vertical distance between rows = hex-height * 3/4 */
+    grid-auto-rows: 180px; /* vertical distance between rows = hex-height * 3/4 */
     justify-content: center;
     gap: 0; /* no extra gap */
 }

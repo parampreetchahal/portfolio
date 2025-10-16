@@ -18,6 +18,21 @@
   font-family: 'Outfit', sans-serif !important;
 }
 
+html, body {
+  overflow-x: hidden; /* keeps rest of page from moving sideways */
+}
+
+/* ✅ Re-enable horizontal scroll for carousel */
+.projects-carousel {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch; /* smoother scroll on iPhone */
+}
+
+.projects-carousel {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   display: flex;

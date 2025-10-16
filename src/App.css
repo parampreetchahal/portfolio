@@ -1,23 +1,31 @@
+/* Root container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
+/* Logo styles */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,45 +41,100 @@
   }
 }
 
+/* Card styling */
 .card {
   padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 1rem auto;
+  max-width: 90%;
 }
 
 .read-the-docs {
   color: #888;
 }
 
-/* Center the profile image on the page */
+/* App container */
 .app-container {
-  display:contents;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 60vh; /* leave some breathing room */
+  min-height: 60vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Profile image */
 .profile-image {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%; /* make it circular */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-  border: 4px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border: 4px solid rgba(255, 255, 255, 0.08);
 }
 
-@media (max-width: 720px) {
-  .profile-image {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-h1{
+/* Heading */
+h1 {
   margin-top: 1rem;
   font-size: 2em;
-  color: white; 
+  color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
+  word-wrap: break-word;
+}
 
+/* ---------- Responsive Styles ---------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card {
+    padding: 1.5em;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.8rem;
+  }
+
+  .profile-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .card {
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.3em;
+    margin-top: 0.8rem;
+  }
+}
+
+/* Prevent horizontal scroll globally */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
