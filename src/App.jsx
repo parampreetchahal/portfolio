@@ -9,7 +9,7 @@ const App = () => {
       <div className="profile-card">
         <img className="profile-image" src={profile} alt="Profile" />
         <h1>Hi! I am Parampreet Singh</h1>
-        <p>Frontend Developer | ML/AI Enthusiast | Open to Opportunities</p>
+        <p>Frontend Developer | AI/ML Enthusiast | Open to Opportunities</p>
         <Link to="/portfolio">
           <button className="portfolio-button" type="button">
             View Portfolio
