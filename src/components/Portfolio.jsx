@@ -1,34 +1,34 @@
 import React, { useRef, useState } from 'react';
 import './Portfolio.css';
-import projectImage from '../assets/profile.jpg';
-import onlineAttendance from '../assets/attendance.jpg';
-import cropReccomendation from '../assets/crop.png';
-import pestDetection from '../assets/pestdetection.png';
+
+import onlineAttendance from '../assets/attendance.webp';
+import cropReccomendation from '../assets/crop.webp';
+import pestDetection from '../assets/pestdetection.webp';
 import coldMail from '../assets/coldmail.webp';
 import cache from '../assets/cache.webp';
 import compiler from '../assets/compiler.webp';
-import aws from '../assets/AWS Course.jpg';
-import goldmansachs from '../assets/goldman.jpg';
-import drdo from '../assets/drdo.jpg';
-import salseforce from '../assets/salseforce.jpg';
-import vikistBharat from '../assets/Viksit Bharat Participants.jpg';
-import aws2 from '../assets/AWS Skill Builder Course.jpg';
+import aws from '../assets/AWS Course.webp';
+import goldmansachs from '../assets/goldman.webp';
+import drdo from '../assets/drdo.webp';
+import salseforce from '../assets/salseforce.webp';
+import vikistBharat from '../assets/Viksit Bharat Participants.webp';
+import aws2 from '../assets/AWS Skill Builder Course.webp';
 import Navbar from './Navbar';
 
-import reactLogo from '../assets/react.svg';
+import reactLogo from '../assets/react.webp';
 import pythonLogo from '../assets/python.webp';
-import jsLogo from '../assets/Javascript.jpg';
-import awsLogo from '../assets/aws.png';
-import htmlLogo from '../assets/html.png';
-import cssLogo from '../assets/css.png';
-import githubLogo from '../assets/github.jpeg';
-import cpp from '../assets/cpp.png';
-import nodejs from '../assets/node.jpeg';
-import opencv from '../assets/opencv.jpeg';
-import sql from '../assets/sql.jpeg';
-import cnn from '../assets/cnn.jpeg';
-import pandas from '../assets/pandas.jpeg';
-import matplotlib from '../assets/matplotlib.jpeg';
+import jsLogo from '../assets/Javascript.webp';
+import awsLogo from '../assets/aws.webp';
+import htmlLogo from '../assets/html.webp';
+import cssLogo from '../assets/css.webp';
+import githubLogo from '../assets/github.webp';
+import cpp from '../assets/cpp.webp';
+import nodejs from '../assets/node.webp';
+import opencv from '../assets/opencv.webp';
+import sql from '../assets/sql.webp';
+import cnn from '../assets/cnn.webp';
+import pandas from '../assets/pandas.webp';
+import matplotlib from '../assets/matplotlib.webp';
 
 
 const Portfolio = () => {
