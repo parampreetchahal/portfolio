@@ -18,7 +18,7 @@ const App = () => {
         />
 
         <h1>Hi! I am Parampreet Singh</h1>
-        <p>Frontend Developer | React Enthusiast | Open to Opportunities</p>
+        <p>ML Enthusiast | Frontend Developer | Open to Opportunities</p>
 
         <Link to="/portfolio">
           <button className="portfolio-button" type="button">
